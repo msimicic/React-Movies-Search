@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kalam", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #111111;
+}

@@ -1,0 +1,46 @@
+.movie-screen-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 450px;
+  color: white;
+}
+
+#movie-img {
+  width: 300px;
+  margin-right: 30px;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.description-container > div {
+  font-weight: 200;
+  padding-bottom: 17px;
+}
+
+.description-container > div > span {
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.title {
+  margin: 0px auto;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 800px) {
+  .movie-screen-container {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .movie-screen-container {
+    font-size: 1.25rem;
+  }
+}

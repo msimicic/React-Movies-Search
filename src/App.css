@@ -1,0 +1,13 @@
+.search-bar-container {
+  padding-top: 3vh;
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 350px; /*Searchbar container (njegov padding) se stisce do 350px, jer je sirina iPhone X 375px pa da stisne jos 25px da bude unutar ekrana*/
+}
+
+.movie-container {
+  padding: 5% 7%;
+}
