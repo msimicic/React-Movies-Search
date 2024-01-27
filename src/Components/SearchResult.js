@@ -1,6 +1,10 @@
 import "./SearchResult.css";
+import { Context } from "../App";
+import { useContext } from "react";
 
-function SearchResult({ setInput, setResults, setPickedMovie, result, index }) {
+function SearchResult({ result, index }) {
+  const { setResults, setPickedMovie, setInput } = useContext(Context);
+
   return (
     <div
       className="search-result"

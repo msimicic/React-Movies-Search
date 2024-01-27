@@ -1,8 +1,10 @@
 import "./App.css";
-import { useState } from "react";
+import { createContext, useState } from "react";
 import SearchBar from "./Components/SearchBar";
 import SearchResultsList from "./Components/SearchResultsList";
 import MovieScreen from "./Components/MovieScreen";
+
+export const Context = createContext();
 
 function App() {
   const [results, setResults] = useState([]);
@@ -12,13 +14,26 @@ function App() {
   return (
     <div className="App">
       <div className="search-bar-container">
-        <SearchBar setResults={setResults} input={input} setInput={setInput} />
+        <Context.Provider
+          value={{
+            results,
+            setResults,
+            pickedMovie,
+            setPickedMovie,
+            input,
+            setInput,
+          }}
+        >
+          <SearchBar />
+          <SearchResultsList />
+        </Context.Provider>
+        {/* <SearchBar setResults={setResults} input={input} setInput={setInput} />
         <SearchResultsList
           results={results}
           setPickedMovie={setPickedMovie}
-          setResults={setResults}
+          setResults={setResults}>
           setInput={setInput}
-        />
+        /> */}
       </div>
       {pickedMovie && (
         <div className="movie-container">

@@ -1,27 +1,12 @@
 import { FaSearch } from "react-icons/fa";
 import "./SearchBar.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { Context } from "../App";
 import Axios from "axios";
 
-function SearchBar({ input, setInput, setResults }) {
+function SearchBar() {
+  const { input, setInput, setResults } = useContext(Context);
   const [listOfMovies, setListOfMovies] = useState([]);
-
-  // useEffect(() => {
-  //   Axios.get("https://imdb188.p.rapidapi.com/api/v1/getFanFavorites", {
-  //     method: "GET",
-  //     params: { country: "US" },
-  //     headers: {
-  //       "X-RapidAPI-Key": "2cdaf41bd8mshed21ee02ab5bc12p113beejsne67845e36d90",
-  //       "X-RapidAPI-Host": "imdb188.p.rapidapi.com",
-  //     },
-  //   })
-  //     .then((response) => {
-  //       setListOfMovies(response.data.data.list);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
 
   useEffect(() => {
     const fetchData = async () => {
