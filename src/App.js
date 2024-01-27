@@ -27,13 +27,6 @@ function App() {
           <SearchBar />
           <SearchResultsList />
         </Context.Provider>
-        {/* <SearchBar setResults={setResults} input={input} setInput={setInput} />
-        <SearchResultsList
-          results={results}
-          setPickedMovie={setPickedMovie}
-          setResults={setResults}>
-          setInput={setInput}
-        /> */}
       </div>
       {pickedMovie && (
         <div className="movie-container">
