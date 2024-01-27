@@ -1,3 +1,5 @@
+An app fetches 50 movies from an API. In searchbar we get a list of filtered movies that contain searched input. On click, movie data gets rendered.
+
 Components relationship:
 
     										  _____________________
